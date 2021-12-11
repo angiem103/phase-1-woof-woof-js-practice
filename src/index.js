@@ -25,12 +25,12 @@ function loadPups() {
                 } else {
                     button.innerText = 'Bad Dog!'
                 }
-                console.log(pup)
+                //console.log(pup)
                 goodBadButton = document.querySelector('#good-bad-dog')
 
                 goodBadButton.addEventListener('click', (e)=>{changeObj(pup)})
                 function changeObj(pup) {
-                    console.log(pup)
+                    //console.log(pup)
                     if(button.innerText == 'Good Dog!'){
                         pup.isGoodDog = false
                         button.innerText = 'Bad Dog!'
@@ -39,8 +39,9 @@ function loadPups() {
                         button.innerText = 'Good Dog!'
                     
                     }
-                }
-                    updatePup(pup)
+                    console.log(pup)
+                
+                   
                     function updatePup(pup) {
        
                         fetch(`http://localhost:3000/pups/${pup.id}`,{
@@ -54,9 +55,10 @@ function loadPups() {
                             .then( pup => console.log(pup))
                      
                     }
-                
+                updatePup(pup)
                 }
-        
+                }
+      
             
               
          
