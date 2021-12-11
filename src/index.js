@@ -28,7 +28,7 @@ function loadPups() {
                 console.log(pup)
                 goodBadButton = document.querySelector('#good-bad-dog')
 
-                goodBadButton.addEventListener('click', changeObj)
+                goodBadButton.addEventListener('click', (e)=>{changeObj(pup)})
                 function changeObj(pup) {
                     console.log(pup)
                     if(button.innerText == 'Good Dog!'){
